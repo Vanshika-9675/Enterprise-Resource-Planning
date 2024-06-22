@@ -49,43 +49,45 @@ const EmsLogin = () => {
 
   const handleLogin = () => {
     if (validateFields()) {
-      const username = UserName;
-      const credentials = { username, password };
-      dispatch(emsLogin(credentials))
-        .unwrap()
-        .then((data) => {
-          if (data.includes('EMPLOYEE')) {
-            navigation("/emsDashboard");
-          } 
-          else {
-            throw new Error("Access denied");
-          }
-        })
-        .catch((err) => {
-          alert("Error Loggin In");
-        });
+      // const username = UserName;
+      // const credentials = { username, password };
+      // dispatch(emsLogin(credentials))
+      //   .unwrap()
+      //   .then((data) => {
+      //     if (data.includes('EMPLOYEE')) {
+      //       navigation("/emsDashboard");
+      //     } 
+      //     else {
+      //       throw new Error("Access denied");
+      //     }
+      //   })
+      //   .catch((err) => {
+      //     alert("Error Loggin In");
+      //   });
+      navigation("/emsDashboard");
     }
   };
   
 
   const AdminLogin = () => {
     if (validateFields()) {
-      const username = UserName;
-      const credentials = { username, password };
+      // const username = UserName;
+      // const credentials = { username, password };
 
-      dispatch(emsLogin(credentials))
-        .unwrap()
-        .then((data) => {
-          if (data.includes('ADMIN')) {
-            navigation("/emsAdminDashboard");
-          } 
-          else {
-            throw new Error("Access denied");
-          }
-        })
-        .catch((err) => {
-          alert("Error Loggin In");
-        });
+      // dispatch(emsLogin(credentials))
+      //   .unwrap()
+      //   .then((data) => {
+      //     if (data.includes('ADMIN')) {
+      //       navigation("/emsAdminDashboard");
+      //     } 
+      //     else {
+      //       throw new Error("Access denied");
+      //     }
+      //   })
+      //   .catch((err) => {
+      //     alert("Error Loggin In");
+      //   });
+      navigation("/emsAdminDashboard");
     }
   };
 
